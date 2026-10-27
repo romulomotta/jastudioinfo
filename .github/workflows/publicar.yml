@@ -1,4 +1,4 @@
-# Valida o conteudo.json e, se estiver certo, publica o repositório no GitHub Pages.
+# Reduz as fotos, valida o conteudo.json e, se estiver certo, publica o repositório no GitHub Pages.
 # Com o JSON errado, a publicação para e o app continua recebendo a versão anterior.
 name: Publicar conteúdo
 
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # para salvar as fotos reduzidas no repositório
   pages: write
   id-token: write
 
@@ -27,6 +27,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      # Fotos com mais de 600 px ou 200 KB, ou em PNG/WebP, viram JPG leve. O commit feito com o
+      # GITHUB_TOKEN não dispara outra execução; esta mesma segue e publica as fotos reduzidas
+      - name: Reduzir fotos
+        run: |
+          pip install --quiet pillow==11.3.0
+          python3 scripts/otimizar_fotos.py
+      - name: Salvar fotos reduzidas
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A fotos conteudo.json
+            git commit -m "reduz as fotos (automatico)"
+            git push
+          fi
       - name: Validar conteudo.json
         run: python3 scripts/validar.py
       - uses: actions/configure-pages@v5

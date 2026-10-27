@@ -30,7 +30,7 @@ content:
             type: string
             required: true
           - name: imagem
-            label: Foto (quadrada, cerca de 600 px)
+            label: Foto (JPG, PNG ou WebP; a publicação reduz sozinha)
             type: image
             required: true
             options:

@@ -19,13 +19,17 @@ Publicado em: https://romulomotta.github.io/proj_input_calculadora3d/conteudo.js
 5. A mudança chega ao app em alguns minutos (cache do GitHub Pages) e aparece
    ao reabrir o app.
 
-Fotos: quadradas, cerca de 600 px, JPG, menos de 200 KB. Foto grande só gasta
-os dados de quem usa o app.
+Fotos: JPG, PNG ou WebP, de qualquer tamanho, de preferência quadradas. Ao
+publicar, a action reduz para no máximo 600 px em JPG (até 200 KB) e troca o
+caminho no `conteudo.json` se o nome mudar (`argola.png` → `argola.jpg`). Isso
+vira um commit "reduz as fotos (automatico)": se o formulário estiver aberto,
+recarregue a página antes de salvar de novo.
 
 ## Como mudar (direto no JSON)
 
 Edite o `conteudo.json` pelo GitHub (lápis ✏️ → **Commit changes**). Fotos novas
-vão em `fotos/`, e no JSON o `imagem` fica `/fotos/<arquivo>`. Para conferir
+vão em `fotos/`, e no JSON o `imagem` fica `/fotos/<arquivo>`. Para rodar a redução
+localmente: `python3 scripts/otimizar_fotos.py` (precisa do Pillow). Para conferir
 antes do commit: `python3 scripts/validar.py`.
 
 ## Formato
