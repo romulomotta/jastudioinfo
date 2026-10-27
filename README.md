@@ -4,13 +4,13 @@ Conteúdo que o app **JA Studio 3D** (iOS) busca ao abrir: os destaques da aba
 Sobre, os dois banners da calculadora e os links de lojas e redes. Muda sem
 publicar uma versão nova do app.
 
-Publicado em: https://romulomotta.github.io/ja-studio-conteudo/conteudo.json
+Publicado em: https://romulomotta.github.io/proj_input_calculadora3d/conteudo.json
 
 ## Como mudar
 
 1. Edite o `conteudo.json` (pelo site do GitHub serve: lápis ✏️ → **Commit changes**).
 2. Fotos novas vão em `fotos/` (quadradas, cerca de 600 px, JPG, menos de 200 KB),
-   e no JSON o `imagem` fica `https://romulomotta.github.io/ja-studio-conteudo/fotos/<arquivo>`.
+   e no JSON o `imagem` fica `https://romulomotta.github.io/proj_input_calculadora3d/fotos/<arquivo>`.
 3. O commit dispara a action **Publicar conteúdo**: ela confere o JSON e publica.
    Se ela falhar (❌ na aba **Actions**), o app continua com a versão anterior;
    abra a execução para ver o que está errado.

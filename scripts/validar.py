@@ -3,7 +3,7 @@ import json
 import os
 import sys
 
-BASE = "https://romulomotta.github.io/ja-studio-conteudo/"
+BASE = "https://romulomotta.github.io/proj_input_calculadora3d/"
 CHAVES_REDES = {"Shopee", "ML", "Amazon", "TikTok", "Instagram"}
 erros = []
 
