@@ -60,18 +60,9 @@ content:
             type: string
             required: true
       - name: links_redes
-        label: Links das lojas e redes (aba Sobre)
+        label: Links das redes (aba Sobre)
         type: object
         fields:
-          - name: Shopee
-            label: Shopee
-            type: string
-          - name: ML
-            label: Mercado Livre
-            type: string
-          - name: Amazon
-            label: Amazon
-            type: string
           - name: TikTok
             label: TikTok
             type: string

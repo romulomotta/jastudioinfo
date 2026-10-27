@@ -1,7 +1,7 @@
 # JA Studio 3D: conteúdo
 
 Conteúdo que o app **JA Studio 3D** (iOS) busca ao abrir: os destaques da aba
-Sobre, os dois banners da calculadora e os links de lojas e redes. Muda sem
+Sobre, os dois banners da calculadora e os links das redes. Muda sem
 publicar uma versão nova do app.
 
 Publicado em: https://romulomotta.github.io/proj_input_calculadora3d/conteudo.json
@@ -39,7 +39,7 @@ antes do commit: `python3 scripts/validar.py`.
 | `destaques` | Lista de produtos: `nome`, `link` (página da loja), `imagem` (`/fotos/<arquivo>` deste repositório ou link https externo) e, opcional, `preco` (texto, como `"R$ 89,90"`). Sem `preco`, o card mostra "Ver preço →" |
 | `banner_materiais_1` | Banner acima de "Custos & Tempo": `texto` e `link` |
 | `banner_materiais_2` | Banner acima de "Preço de Venda & Margem": `texto` e `link` |
-| `links_redes` | Endereços dos botões `Shopee`, `ML`, `Amazon`, `TikTok`, `Instagram`; o que faltar fica com o endereço que está no app |
+| `links_redes` | Endereços dos botões `TikTok` e `Instagram`; o que faltar fica com o endereço que está no app |
 
 
 Tudo aqui é público: não coloque nada secreto.
