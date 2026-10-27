@@ -23,7 +23,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      # Sempre o main atual: um re-run de execução antiga não republica conteúdo velho
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Validar conteudo.json
         run: python3 scripts/validar.py
       - uses: actions/configure-pages@v5
