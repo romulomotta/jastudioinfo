@@ -1,17 +1,25 @@
 {
   "destaques": [
-    { "nome": "Filamento PETG Rosa",
+    {
+      "nome": "Filamento PETG Rosa",
       "link": "https://www.amazon.com.br/dp/B0F7KC84GL",
-      "imagem": "/fotos/petg-rosa-amazon.jpg" },
-    { "nome": "PETG Preto Masterprint",
+      "imagem": "/fotos/petg-rosa-amazon.jpg"
+    },
+    {
+      "nome": "PETG Preto Masterprint",
       "link": "https://www.amazon.com.br/dp/B09WY3MSXN",
-      "imagem": "/fotos/petg-preto-masterprint-amazon.jpg" },
-    { "nome": "PETG Preto Masterprint",
+      "imagem": "/fotos/petg-preto-masterprint-amazon.jpg"
+    },
+    {
+      "nome": "PETG Preto Masterprint",
       "link": "https://www.mercadolivre.com.br/p/MLB47258438?pdp_filters=item_id:MLB7772677090",
-      "imagem": "/fotos/petg-preto-masterprint-ml.jpg" },
-    { "nome": "PLA Lite Bambu Lab",
-      "link": "https://www.mercadolivre.com.br/p/MLB60654855?pdp_filters=item_id:MLB4465956861",
-      "imagem": "/fotos/pla-lite-bambu-ml.jpg" }
+      "imagem": "/fotos/petg-preto-masterprint-ml.jpg"
+    },
+    {
+      "nome": "Argola Chaveiro 25mm Corrente + Elo 1000 Peças Prateada",
+      "link": "https://meli.la/1Jxr2kX",
+      "imagem": "/fotos/pla-lite-bambu-ml.jpg"
+    }
   ],
   "banner_materiais_1": {
     "texto": "Precisando de filamento? Confira os materiais recomendados.",
