@@ -1,0 +1,80 @@
+# Configuração do Pages CMS (https://pagescms.org): o formulário para editar o conteúdo do app
+# sem mexer no JSON. Cada "Salvar" vira um commit, e a action "Publicar conteúdo" confere e publica.
+media:
+  input: fotos
+  output: /fotos
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: conteudo
+    label: Conteúdo do app
+    type: file
+    path: conteudo.json
+    format: json
+    fields:
+      - name: destaques
+        label: Destaques (aba Sobre)
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{nome}"
+        fields:
+          - name: nome
+            label: Nome do produto
+            type: string
+            required: true
+          - name: link
+            label: Link do produto na loja (https://...)
+            type: string
+            required: true
+          - name: imagem
+            label: Foto (quadrada, cerca de 600 px)
+            type: image
+            required: true
+            options:
+              rename: safe
+      - name: banner_materiais_1
+        label: Banner de cima da calculadora (antes de "Custos & Tempo")
+        type: object
+        fields:
+          - name: texto
+            label: Texto
+            type: string
+            required: true
+          - name: link
+            label: Link (https://...)
+            type: string
+            required: true
+      - name: banner_materiais_2
+        label: Banner de baixo da calculadora (antes de "Preço de Venda & Margem")
+        type: object
+        fields:
+          - name: texto
+            label: Texto
+            type: string
+            required: true
+          - name: link
+            label: Link (https://...)
+            type: string
+            required: true
+      - name: links_redes
+        label: Links das lojas e redes (aba Sobre)
+        type: object
+        fields:
+          - name: Shopee
+            label: Shopee
+            type: string
+          - name: ML
+            label: Mercado Livre
+            type: string
+          - name: Amazon
+            label: Amazon
+            type: string
+          - name: TikTok
+            label: TikTok
+            type: string
+          - name: Instagram
+            label: Instagram
+            type: string

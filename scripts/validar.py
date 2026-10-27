@@ -36,12 +36,13 @@ else:
         texto(destaque.get("nome"), f"{onde}.nome")
         https(destaque.get("link"), f"{onde}.link")
         imagem = destaque.get("imagem")
-        https(imagem, f"{onde}.imagem")
-        # Foto deste repositório: o arquivo tem de existir em fotos/
-        if isinstance(imagem, str) and imagem.startswith(BASE):
-            caminho = imagem[len(BASE):]
-            if not os.path.isfile(caminho):
-                erros.append(f"{onde}.imagem: o arquivo {caminho} não existe no repositório")
+        # Foto deste repositório (o Pages CMS grava "/fotos/arquivo.jpg") ou link https externo
+        if isinstance(imagem, str) and (imagem.startswith(BASE) or not imagem.startswith("http")):
+            caminho = imagem[len(BASE):] if imagem.startswith(BASE) else imagem.lstrip("/")
+            if not caminho or not os.path.isfile(caminho):
+                erros.append(f"{onde}.imagem: o arquivo {caminho or '(vazio)'} não existe no repositório")
+        else:
+            https(imagem, f"{onde}.imagem")
         if "preco" in destaque and not isinstance(destaque["preco"], str):
             erros.append(f"{onde}.preco: se existir, precisa ser texto, como \"R$ 89,90\"")
 
