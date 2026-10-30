@@ -4,12 +4,12 @@ Conteúdo que o app **JA Studio 3D** (iOS) busca ao abrir: os destaques da aba
 Sobre, os dois banners da calculadora e os links das redes. Muda sem
 publicar uma versão nova do app.
 
-Publicado em: https://romulomotta.github.io/proj_input_calculadora3d/conteudo.json
+Publicado em: https://romulomotta.github.io/jastudioinfo/conteudo.json
 
 ## Como mudar (pelo formulário)
 
 1. Abra https://app.pagescms.org e clique em **Sign in with GitHub**.
-2. Escolha o repositório `proj_input_calculadora3d` → **Conteúdo do app**.
+2. Escolha o repositório `jastudioinfo` → **Conteúdo do app**.
 3. Mude o que quiser: em **Destaques**, cada produto tem **Nome**, **Link** e
    **Foto** (botão para enviar a imagem). **+ Add** cria um produto novo.
 4. Clique em **Save**. Isso vira um commit e dispara a action **Publicar
