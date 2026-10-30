@@ -14,3 +14,5 @@ h2 { font-size: 20px; margin: 32px 0 8px; }
 a { color: var(--laranja); }
 li { margin-bottom: 8px; }
 footer { margin-top: 40px; color: var(--secundario); font-size: 15px; }
+.telas { display: flex; gap: 16px; justify-content: center; margin: 24px 0 8px; }
+.telas img { width: calc(50% - 8px); max-width: 260px; height: auto; border-radius: 24px; }
